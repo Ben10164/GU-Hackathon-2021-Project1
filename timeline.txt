@@ -1,0 +1,8 @@
+10:30 Successfully installed python
+10:35 Reinvented the wheel and installed pyaudio
+10:36 Realized sudo was not given to 'csuser'
+11:30 Cranked harded enough to get all the requirements installed
+12:00 Pizza time
+12:30 Got main.py (now simple_waveform.py) to compile
+1:30 simple_waveform.py is basically finished
+
