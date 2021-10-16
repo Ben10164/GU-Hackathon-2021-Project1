@@ -13,3 +13,10 @@ p = pyaudio.PyAudio()
 stream  = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True,output=True,frames_per_buffer=CHUNK)
 
 data = stream.read(CHUNK)
+
+data_int = np.array(struct.unpack(str(2*CHUNK)+ 'B', data), dtype='b')  # This is unpacking the data into an int with length = 2*chunck in bytes
+# b is an integer from 0 to 255
+# the + 127 will make it so the values larger than 255 will wrap around the graph
+fig, ax = plt.subplots()
+ax.plot(data_int, '-')
+plt.show()
